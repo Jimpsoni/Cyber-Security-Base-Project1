@@ -1,5 +1,4 @@
-
-## Simple way:
+## Simple way to get started:
 Download and unzip the git repo folder. To set up the app, first run the `init.bat` file, then start the server by running `run.bat`. You only have to run `init.bat` once.
 
 ## Manual install:
