@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Home</title>
+  </head>
+
+  <body>
+    <a href="/logout">
+      <button>Log out</button>
+    </a>
+
+    <a href="/settings">
+      <button>Settings</button>
+    </a>
+
+    <h1>Hello {{ username }}!</h1> 
+    
+    <a href="/upload">
+      <button>Upload new image</button>
+    </a>
+    <br><br>
+
+    <h2>Your images</h2>
+
+    <form action="/search" method="get">
+  
+      <div class="form-group">
+        <label for="term"></label>
+        <input name="term" type="text" placeholder="Search from images">
+        <button type="submit">search</button>
+      </div>
+    </form>
+
+    <br><br>
+
+    {% for image in images %}
+    <div>
+      {% load static %}
+      <a href="{% static image %}" target="_blank">{{ image.name }}</a>
+    </div>
+    {% endfor %}
+  
+  </body>
+</html>

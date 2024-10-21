@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>User settings</title>
+  </head>
+  <body>
+    <h1>User settings</h1>
+    <a href="../">
+      <button>Back to mainpage</button>
+    </a>
+    <br /><br /><br /><br />
+
+    <form action="/deleteuser" method="get">
+      {% csrf_token %}
+      <button style="color: red" type="submit">Delete account</button>
+    </form>
+  </body>
+</html>

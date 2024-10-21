@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Sign up into image app</title>
+  </head>
+
+  <body>
+    <h1>Sign up into image app</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input name="username" type="text" placeholder="Enter Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" type="password" placeholder="Enter Password">
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p style="color: red;">{{error}}</p>
+  </body>
+</html>

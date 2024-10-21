@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Search...</title>
+  </head>
+
+  <body>
+    <a href="../">
+        <button>Back to mainpage</button>
+     </a>
+
+    <h1>Images with search '{{searchterm}}'</h1> 
+
+    <h2>Images that match:</h2>
+
+    {% if  imagecount == 0%}
+    <p style="color: red;">No images matched search</p>
+     {% else %}
+
+     
+     {% for image in images %}
+     <div>
+       {% load static %}
+       <a href="{% static image %}" target="_blank">{{ image.name }}</a>
+     </div>
+     {% endfor %}
+
+
+
+    {% endif %}
+  </body>
+</html>

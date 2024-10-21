@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Log into your account</title>
+  </head>
+
+  <body>
+    <h1>Log in</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input name="username" type="text" placeholder="Enter Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" type="password" placeholder="Enter Password">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <p style="color: red;">{{error}}</p>
+    <br><br>
+    Or...
+    <br><br>
+    <a href="/createuser">
+      <button>Create an account</button>
+    </a>
+
+  </body>
+</html>
