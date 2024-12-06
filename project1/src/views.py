@@ -130,13 +130,16 @@ def usersettings(request):
 
 @login_required(login_url='login')
 def deleteuser(request):
-    try:
-        u = User.objects.get(id = request.user.id)
-        u.delete()
-        # logging.warning(f"Deleted user '{request.user.username}'")
+    if request.method == 'POST':
+        try:
+            u = User.objects.get(id = request.user.id)
+            u.delete()
+            # logging.warning(f"Deleted user '{request.user.username}'")
 
-        return redirect('/login')
+            return redirect('/login')
 
-    except Exception as e: 
-        # logging.critical(f"Tried to delete a user that doesn't exist!!")
+        except Exception as e: 
+            # logging.critical(f"Tried to delete a user that doesn't exist!!")
+            return redirect('/')
+    else:
         return redirect('/')
