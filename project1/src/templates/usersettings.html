@@ -10,7 +10,7 @@
     </a>
     <br /><br /><br /><br />
 
-    <form action="/deleteuser" method="get">
+    <form action="/deleteuser/" method="POST">
       {% csrf_token %}
       <button style="color: red" type="submit">Delete account</button>
     </form>
